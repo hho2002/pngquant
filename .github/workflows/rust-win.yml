@@ -2,10 +2,8 @@ name: Rust
 
 on:
   push:
-    branches:
-      - msvc
     tags:
-      - '*'
+      - 'win-*'
 
 env:
   CARGO_TERM_COLOR: always
@@ -33,7 +31,6 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: target/release/pngquant.exe
         env:
