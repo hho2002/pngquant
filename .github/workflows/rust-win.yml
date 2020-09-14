@@ -2,7 +2,10 @@ name: Rust
 
 on:
   push:
-    branches: [ msvc ]
+    branches:
+      - msvc
+    tags:
+      - *
 
 env:
   CARGO_TERM_COLOR: always
