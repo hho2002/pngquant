@@ -5,7 +5,7 @@ on:
     branches:
       - msvc
     tags:
-      - *
+      - '*'
 
 env:
   CARGO_TERM_COLOR: always
